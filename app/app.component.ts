@@ -19,5 +19,10 @@ export class AppComponent {
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  firstTask = {description: "Finish weekend Angular homework"}
+  firstTask: Task = new Task("Finish weekend Angular homework");
+}
+
+export class Task {
+  public done: boolean = false;
+  constructor(public description: string) { }
 }
